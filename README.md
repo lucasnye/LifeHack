@@ -1,17 +1,17 @@
 # LifeHack App
 App/\
-├── README.md                         # Project overview, setup instructions, and contributors\
-├── LICENSE                           # Open-source license (e.g., MIT, Apache 2.0)\
-├── .gitignore                        # Specifies files to be ignored by Git\
+    ├── README.md                         # Project overview, setup instructions, and contributors\
+    ├── LICENSE                           # Open-source license (e.g., MIT, Apache 2.0)\
+    ├── .gitignore                        # Specifies files to be ignored by Git\
 
-├── frontend/                         # React Native Frontend\
-│   ├── App.js                        # Entry point of the mobile app\
-│   ├── package.json                  # Frontend dependencies and scripts\
-│   ├── components/                   # Reusable UI components (buttons, cards, etc.)\
-│   ├── screens/                      # Individual pages/screens of the app\
-│   ├── navigation/                   # Navigation logic and config\
-│   ├── services/                     # API calls to backend endpoints\
-│   └── accessibility/                # Screen reader support, text scaling, etc.\
+    ├── frontend/                         # React Native Frontend\
+    │   ├── App.js                        # Entry point of the mobile app\
+    │   ├── package.json                  # Frontend dependencies and scripts\
+    │   ├── components/                   # Reusable UI components (buttons, cards, etc.)\
+    │   ├── screens/                      # Individual pages/screens of the app\
+    │   ├── navigation/                   # Navigation logic and config\
+    │   ├── services/                     # API calls to backend endpoints\
+    │   └── accessibility/                # Screen reader support, text scaling, etc.\
 
 ├── backend/                          # Python Backend (FastAPI)\
 │   ├── main.py                       # Starts the backend server\
