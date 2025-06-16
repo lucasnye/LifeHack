@@ -1,74 +1,74 @@
 # LifeHack
 
-LifeHack/
-├── README.md                         # Project overview, setup instructions, features, and contributors
+accessible-edtech-platform/
+├── README.md                         # Project overview, setup instructions, and contributors
 ├── LICENSE                           # Open-source license (e.g., MIT, Apache 2.0)
-├── .gitignore                        # Files and folders to ignore in version control (e.g., __pycache__, node_modules)
+├── .gitignore                        # Specifies files to be ignored by Git
 
-# ===== FRONTEND (React Native mobile app or optional web version) =====
+# ==== React Native Frontend ====
 ├── frontend/
-│   ├── App.js                        # Main entry point of the React Native app
-│   ├── package.json                  # Project metadata and dependencies for the frontend
-│   ├── components/                   # Reusable UI components (buttons, headers, cards, etc.)
-│   ├── screens/                      # Different screens/pages (e.g., Home, Upload, Results)
-│   ├── navigation/                   # Navigation logic (e.g., React Navigation config)
-│   ├── services/                     # API service handlers to call backend endpoints
-│   └── accessibility/                # WCAG-compliant utilities, screen reader integration, text scaling, etc.
+│   ├── App.js                        # Entry point of the mobile app
+│   ├── package.json                  # Frontend dependencies and scripts
+│   ├── components/                   # Reusable UI components (buttons, cards, etc.)
+│   ├── screens/                      # Individual pages/screens of the app
+│   ├── navigation/                   # Navigation logic and config
+│   ├── services/                     # API calls to backend endpoints
+│   └── accessibility/                # Screen reader support, text scaling, etc.
 
-# ===== BACKEND (Python - FastAPI recommended) =====
+# ==== Python Backend (FastAPI) ====
 ├── backend/
-│   ├── main.py                       # Entry point to start the backend server
-│   ├── requirements.txt              # Python dependencies for backend (FastAPI, transformers, etc.)
+│   ├── main.py                       # Starts the backend server
+│   ├── requirements.txt              # Backend dependencies
 │   ├── app/
-│   │   ├── api/                      # API route definitions
-│   │   │   ├── routes_tts.py         # Text-to-speech endpoint
-│   │   │   ├── routes_asl.py         # Sign language translation endpoint
-│   │   │   ├── routes_captions.py    # Real-time transcription and subtitle generation
-│   │   │   ├── routes_alt_text.py    # Image captioning / alt-text endpoint
-│   │   │   ├── routes_lms.py         # LMS integration (e.g., upload to Moodle)
-│   │   │   └── routes_auth.py        # Authentication (optional: for user login, tokens)
-│   │   ├── services/                 # Core logic and processing for each feature
-│   │   │   ├── tts.py                # Text-to-speech processing (calls gTTS or pyttsx3)
-│   │   │   ├── asl.py                # Text-to-ASL processing logic or lookup
-│   │   │   ├── captions.py           # Real-time ASR transcription using Whisper/Vosk
-│   │   │   ├── alt_text.py           # Image captioning using vision-language models
-│   │   │   └── lms.py                # LMS communication handlers (e.g., REST API to Canvas)
-│   │   ├── utils/                    # Shared utility functions (file upload, logging, validation)
-│   │   └── models/                   # Optional: Model loading, preprocessing, and caching logic
-│   │       └── model_loader.py       # Load and cache pre-trained ML models efficiently
+│   │   ├── api/
+│   │   │   ├── routes_tts.py         # Endpoint for text-to-speech
+│   │   │   ├── routes_asl.py         # Endpoint for ASL generation
+│   │   │   ├── routes_captions.py    # Endpoint for real-time transcription/subtitles
+│   │   │   ├── routes_alt_text.py    # Endpoint for alt text generation from images
+│   │   │   ├── routes_lms.py         # LMS integration endpoint
+│   │   │   └── routes_auth.py        # User login/authentication (if needed)
+│   │   ├── services/
+│   │   │   ├── tts.py                # Logic for TTS generation
+│   │   │   ├── asl.py                # Logic for sign language rendering
+│   │   │   ├── captions.py           # Real-time transcription logic
+│   │   │   ├── alt_text.py           # Caption generation for images
+│   │   │   └── lms.py                # Logic to connect with LMS systems
+│   │   ├── utils/                    # Helper functions and file handling
+│   │   └── models/
+│   │       └── model_loader.py       # Shared model loading and caching
 
-# ===== THIRD-PARTY INTEGRATIONS =====
+# ==== Third-Party and Assistive Integrations ====
 ├── integrations/
-│   ├── lms_adapter.py                # Code to interact with LMS systems like Moodle, Canvas
-│   └── screen_reader_support/        # Optional tools for frontend to enhance screen reader usage
+│   ├── lms_adapter.py                # Adapters for LMS APIs (e.g., Moodle, Canvas)
+│   └── screen_reader_support/        # Tools for screen reader compatibility
 
-# ===== MACHINE LEARNING MODELS =====
+# ==== Pretrained and Custom ML Models ====
 ├── models/
-│   ├── whisper/                      # ASR model files for Whisper or similar
-│   ├── asl_generation/               # Pose detection or pre-rendered ASL sign models
-│   └── vision_captioning/           # Vision-to-text model files (BLIP, CLIP, etc.)
+│   ├── whisper/                      # ASR model (e.g., Whisper)
+│   ├── asl_generation/               # ASL pose models or video assets
+│   └── vision_captioning/           # Image-to-text captioning models
 
-# ===== SAMPLE DATA FOR TESTING =====
+# ==== Sample Content for Testing ====
 ├── data/
-│   ├── sample_texts/                 # Sample text inputs to test TTS and ASL
-│   ├── sample_images/                # Images used to test alt-text generation
-│   └── sample_videos/                # Sample lecture videos for transcription/subtitles
+│   ├── sample_texts/                 # Sample text content for TTS/ASL
+│   ├── sample_images/                # Images for alt-text generation
+│   └── sample_videos/                # Videos for transcription testing
 
-# ===== DEV SCRIPTS AND UTILITIES =====
+# ==== Development and Debugging Scripts ====
 ├── scripts/
-│   ├── test_tts.py                   # Script to test TTS endpoint locally
-│   ├── test_transcription.py         # Script to test real-time transcription
-│   └── test_alt_text.py              # Script to test image captioning endpoint
+│   ├── test_tts.py                   # Test script for TTS service
+│   ├── test_transcription.py         # Test script for transcription service
+│   └── test_alt_text.py              # Test script for image captioning
 
-# ===== DOCUMENTATION FOR DEVELOPERS =====
+# ==== Developer Documentation ====
 ├── docs/
-│   ├── architecture.md               # System architecture and component interactions
-│   ├── user_flows.md                 # UI/UX flows for students and educators
-│   ├── api_endpoints.md              # Documented list of backend endpoints and payloads
-│   ├── accessibility_standards.md   # Notes and checklists for WCAG 2.1 compliance
-│   └── lms_integration.md            # How LMS integration works and setup instructions
+│   ├── architecture.md               # Overall system design and architecture
+│   ├── user_flows.md                 # Describes how users interact with features
+│   ├── api_endpoints.md              # List of backend APIs with request/response formats
+│   ├── accessibility_standards.md   # WCAG 2.1 checklist and compliance notes
+│   └── lms_integration.md            # Guide for LMS (e.g., Moodle) integration
 
-# ===== TESTING CODE =====
+# ==== Testing ====
 └── tests/
-    ├── test_routes.py                # Unit tests for API routes
-    └── test_accessibility.py         # WCAG compliance checks or linting for frontend
+    ├── test_routes.py                # Backend route tests
+    └── test_accessibility.py         # Accessibility unit checks
