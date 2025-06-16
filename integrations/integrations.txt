@@ -1,0 +1,3 @@
+third party interactions
+- Code to interact with LMS systems like Moodle, Canvas
+- Optional tools for frontend to enhance screen reader usage
