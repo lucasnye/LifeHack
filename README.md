@@ -1,11 +1,10 @@
-# LifeHack\
+# LifeHack App
 App/\
 ├── README.md                         # Project overview, setup instructions, and contributors\
 ├── LICENSE                           # Open-source license (e.g., MIT, Apache 2.0)\
 ├── .gitignore                        # Specifies files to be ignored by Git\
 
-# ==== React Native Frontend ====\
-├── frontend/\
+├── frontend/                         # React Native Frontend\
 │   ├── App.js                        # Entry point of the mobile app\
 │   ├── package.json                  # Frontend dependencies and scripts\
 │   ├── components/                   # Reusable UI components (buttons, cards, etc.)\
@@ -14,8 +13,7 @@ App/\
 │   ├── services/                     # API calls to backend endpoints\
 │   └── accessibility/                # Screen reader support, text scaling, etc.\
 
-# ==== Python Backend (FastAPI) ====\
-├── backend/\
+├── backend/                          # Python Backend (FastAPI)\
 │   ├── main.py                       # Starts the backend server\
 │   ├── requirements.txt              # Backend dependencies\
 │   ├── app/\
@@ -36,38 +34,32 @@ App/\
 │   │   └── models/\
 │   │       └── model_loader.py       # Shared model loading and caching\
 
-# ==== Third-Party and Assistive Integrations ====\
-├── integrations/\
+├── integrations/                     # Third-Party & Assistive Integrations (optional)\
 │   ├── lms_adapter.py                # Adapters for LMS APIs (e.g., Moodle, Canvas)\
 │   └── screen_reader_support/        # Tools for screen reader compatibility\
 
-# ==== Pretrained and Custom ML Models ====\
-├── models/\
+├── models/                           # Pretrained / Custom ML Models\  
 │   ├── whisper/                      # ASR model (e.g., Whisper)\
 │   ├── asl_generation/               # ASL pose models or video assets\
-│   └── vision_captioning/           # Image-to-text captioning models\
+│   └── vision_captioning/            # Image-to-text captioning models\
 
-# ==== Sample Content for Testing ====\
-├── data/\
+├── data/                             # Sample data for testing (optional)\
 │   ├── sample_texts/                 # Sample text content for TTS/ASL\
 │   ├── sample_images/                # Images for alt-text generation\
 │   └── sample_videos/                # Videos for transcription testing\
 
-# ==== Development and Debugging Scripts ====\
-├── scripts/\
+├── scripts/                          # Development & Debugging Scripts (optional)\
 │   ├── test_tts.py                   # Test script for TTS service\
 │   ├── test_transcription.py         # Test script for transcription service\
 │   └── test_alt_text.py              # Test script for image captioning\
 
-# ==== Developer Documentation ====\
-├── docs/\
+├── docs/                             # Developer Documenatation\
 │   ├── architecture.md               # Overall system design and architecture\
 │   ├── user_flows.md                 # Describes how users interact with features\
 │   ├── api_endpoints.md              # List of backend APIs with request/response formats\
-│   ├── accessibility_standards.md   # WCAG 2.1 checklist and compliance notes\
+│   ├── accessibility_standards.md    # WCAG 2.1 checklist and compliance notes\
 │   └── lms_integration.md            # Guide for LMS (e.g., Moodle) integration\
 
-# ==== Testing ====\
-└── tests/\
+└── tests/                            # Testing (optional)\
     ├── test_routes.py                # Backend route tests\
     └── test_accessibility.py         # Accessibility unit checks\
