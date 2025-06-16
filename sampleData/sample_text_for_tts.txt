@@ -1,0 +1,1 @@
+Glad that worked! The issue happened because Pygame’s mixer module plays audio asynchronously, meaning the program doesn’t wait for the sound to finish before moving on—it just starts playing and immediately exits if there’s nothing keeping it alive.
