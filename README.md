@@ -1,4 +1,6 @@
 # LifeHack App
+Repository Structure
+
     App/\
         ├── README.md                         # Project overview, setup instructions, and contributors\
         ├── LICENSE                           # Open-source license (e.g., MIT, Apache 2.0)\
