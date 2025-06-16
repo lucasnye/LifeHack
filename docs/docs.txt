@@ -1,0 +1,5 @@
+Documentation stuff go here
+- System architecture and component interactions
+- Documented list of backend endpoints and payloads
+- Notes and checklists for WCAG 2.1 compliance
+- How LMS integration works and setup instructions
