@@ -32,6 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'edtech',
+    # 'edtech.apps.EdtechConfig',
+    'channels',
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -67,7 +70,16 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lifehack.wsgi.application'
+# WSGI_APPLICATION = 'lifehack.wsgi.application'
+ASGI_APPLICATION = 'lifehack.asgi.application'
+
+# Channels settings
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    }
+}
+
 
 
 # Database
