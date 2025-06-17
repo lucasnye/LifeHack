@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'edtech',
-    # 'edtech.apps.EdtechConfig',
     'channels',
     'daphne',
     'django.contrib.admin',
